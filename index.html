@@ -122,7 +122,7 @@
   
     <div class="article-meta">
       <a href="/2015/09/02/hexo配置个人博客/" class="article-date">
-  	<time datetime="2015-09-02T04:45:07.000Z" itemprop="datePublished">2015-09-02</time>
+  	<time datetime="2015-09-02T04:47:18.000Z" itemprop="datePublished">2015-09-02</time>
 </a>
     </div>
   
@@ -131,52 +131,70 @@
       <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/02/hexo配置个人博客/">Hexo配置个人博客</a>
-    </h1>
-  
-
-      </header>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Hexo博客搭建教程（Mac用户版）">Hexo博客搭建教程（Mac用户版）</h1><h2 id="Hexo的安装">Hexo的安装</h2><h3 id="hexo需要依赖两个组件来运行,所以我们要确保自己安装了这两个组件">hexo需要依赖两个组件来运行,所以我们要确保自己安装了这两个组件</h3><ol>
-<li>Git ,我是通过安装Githud desktop版本来安装的。<a href="https://desktop.github.com/" target="_blank" rel="external">官网下载链接</a><br>在终端里,自己随便创建一个英文名文件夹,然后执行<code>git init</code>方法,看是否执行成功,就能知道自己是否成功安装git</li>
-<li>Node.js  <a href="https://nodejs.org/" target="_blank" rel="external">官网下载链接</a><br>在终端输入  <code>npm -v</code>就可以查看自己是否成功安装Node.js了<br>如果安装成功，则出现以下情况.<br> $ npm -v<br>2.11.3</li>
+        <p>title: Hexo配置个人博客    </p>
+<h2 id="tags:_[blog搭建]">tags: [blog搭建]</h2><h1 id="Hexo博客搭建教程（Mac用户版）">Hexo博客搭建教程（Mac用户版）</h1><h2 id="Hexo的安装">Hexo的安装</h2><h3 id="hexo需要依赖两个组件来运行,所以我们要确保自己安装了这两个组件">hexo需要依赖两个组件来运行,所以我们要确保自己安装了这两个组件</h3><ol>
+<li><p>Git ,我是通过安装Githud desktop版本来安装的。<a href="https://desktop.github.com/" target="_blank" rel="external">官网下载链接</a>  </p>
+<p>在终端里,自己随便创建一个英文名文件夹,然后执行<code>git init</code>方法,看是否执行成功,就能知道自己是否成功安装git</p>
+</li>
+<li><p>Node.js  <a href="https://nodejs.org/" target="_blank" rel="external">官网下载链接</a>  </p>
+<p>在终端输入  <code>npm -v</code>就可以查看自己是否成功安装Node.js了如果安装成功，则出现以下情况.    </p>
+<p>$ npm -v  </p>
+<p>2.11.3</p>
+</li>
 </ol>
 <h3 id="然后，打开终端,在终端里输入以下命令就可以开始安装hexo了。">然后，打开<strong>终端</strong>,在终端里输入以下命令就可以开始安装hexo了。</h3><pre><code>$ sudo npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo-cli  </span>
 </code></pre><p>过程中可能会卡在node-gyp rebuild这个阶段，请耐心等待(墙太高,要慢慢爬)</p>
 <p>安装成功后,可以通过在终端输入<code>hexo -v</code>查看是否安装成功  </p>
 <pre><code>user:~ lipeng$ hexo -v
+
 hexo-cli: <span class="number">0.1</span><span class="number">.8</span>
+
 os: Darwin <span class="number">14.4</span><span class="number">.0</span> darwin x64
+
 http_parser: <span class="number">2.3</span>
+
 node: <span class="number">0.12</span><span class="number">.7</span>
+
 v8: <span class="number">3.28</span><span class="number">.71</span><span class="number">.19</span>
+
 uv: <span class="number">1.6</span><span class="number">.1</span>
+
 zlib: <span class="number">1.2</span><span class="number">.8</span>
+
 modules: <span class="number">14</span>
+
 openssl: <span class="number">1.0</span><span class="number">.1</span>p  
 </code></pre><h3 id="这时候hexo的安装就大功告成了。">这时候hexo的安装就大功告成了。</h3><h2 id="开始创建博客">开始创建博客</h2><ol>
-<li><p>在终端里,进去你电脑里你准备存放你所写文章的目录(最好是英文名字).<br>然后在该目录下执行以下命令</p>
+<li><p>在终端里,进去你电脑里你准备存放你所写文章的目录(最好是英文名字).</p>
+<p>然后在该目录下执行以下命令</p>
 <p> <code>$ hexo init</code>  </p>
 </li>
 </ol>
 <p>执行成功后:  </p>
 <pre><code>fuzifudeMacBook-Pro:Hexo lipeng$ hexo init
+
 INFO  Copying data <span class="keyword">to</span> ~/Hexo
+
 INFO  You are almost done! Don't forget <span class="keyword">to</span> <span class="command">run</span> 'npm install' <span class="keyword">before</span> you start blogging <span class="keyword">with</span> Hexo!        
 </code></pre><p>这时候你的目录里面会多出很多文件和文件夹。我们可以使用<code>$ ls</code>命令查看到以下情况</p>
 <pre><code>$ ls
+
 _config<span class="class">.yml</span>    package<span class="class">.json</span>    scaffolds    source        themes
-</code></pre><p>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── scripts<br>├── source<br>|   ├── _drafts<br>|   └── _posts<br>└── themes</p>
+</code></pre><p>├── _config.yml</p>
+<p>├── package.json  </p>
+<p>├── scaffolds  </p>
+<p>├── scripts  </p>
+<p>├── source  </p>
+<p>|   ├── _drafts  </p>
+<p>|   └── _posts  </p>
+<p>└── themes</p>
 <p>各个目录的功能:</p>
 <h3 id="然后继续在本目录下执行以下命令">然后继续在本目录下执行以下命令</h3><pre><code>$ npm <span class="operator"><span class="keyword">install</span> hexo
+
 $ hexo <span class="keyword">server</span>    
+
 INFO  Hexo <span class="keyword">is</span> running <span class="keyword">at</span> <span class="keyword">http</span>://<span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">4000</span>/. Press Ctrl+<span class="keyword">C</span> <span class="keyword">to</span>     <span class="keyword">stop</span>.</span>
 </code></pre><p>然后在浏览器输入 <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>这个网址,就可以看到你自己在本地创建的博客了</p>
 <h2 id="将你的博客摆上网络。">将你的博客摆上网络。</h2><h3 id="使用你的Githud账户建立一个username-github-io的库">使用你的Githud账户建立一个username.github.io的库</h3><p>例子:我在githud上面的名字叫CHNLiPeng,所以我的应该创建一个名字叫<strong><em>CHNLiPeng.github.io</em></strong><a href="https://github.com/CHNLiPeng/CHNLiPeng.github.io" target="_blank" rel="external">例子连接</a>的仓库。(字母不要写错,最好粘贴我这里的例子过去,然后直接修改成你的githud名)  </p>
@@ -185,10 +203,12 @@ INFO  Hexo <span class="keyword">is</span> running <span class="keyword">at</spa
 </ul>
 <p>hexo3.0以上的版本需要安装这个文件</p>
 <pre><code>$ npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span>
-</code></pre><p>配置文件里<strong>deploy</strong>的<strong>type</strong>改成<strong>git</strong>(3.0以下的是githud)<br>如果你安装的时候,卡在了这一步:</p>
+</code></pre><p>配置文件里<strong>deploy</strong>的<strong>type</strong>改成<strong>git</strong>(3.0以下的是githud)</p>
+<p>如果你安装的时候,卡在了这一步:</p>
 <pre><code><span class="blockquote">&gt; node-gyp rebuild</span>
 </code></pre><p>则你需要npm的镜像改成国内淘宝的,执行以下命令即可</p>
 <pre><code>$ npm config <span class="keyword">set</span> <span class="keyword">registry</span> https://<span class="keyword">registry</span>.npm.taobao.org 
+
 $ npm <span class="keyword">info</span> underscore （如果上面配置正确这个命令会有字符串response）
 </code></pre>
       
@@ -197,10 +217,6 @@ $ npm <span class="keyword">info</span> underscore （如果上面配置正确�
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog搭建/">blog搭建</a></li></ul>
-	</div>
-
       
 
       
